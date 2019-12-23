@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CDS Smoke Test Suite" verbose="1" preserve-order="true" parallel="none" configfailurepolicy="continue">
+
+
+<!--================================================= Suite set up ==================================================-->
+
+    <test name="Suite Set Up">
+        <classes>
+            <class name="APITests"/>
+        </classes>
+    </test>
+
+<!--================================================ /Suite set up ==================================================-->
+
+</suite>
