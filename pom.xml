@@ -58,6 +58,30 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <productVersion>${version}</productVersion>
+                    </systemPropertyVariables>
+                    <!--<argLine>-->
+                    <!-- -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"-->
+                    <!--</argLine>-->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>api_test_build.xml</suiteXmlFile>
+                        <!--<executionXML>${xmlToExecute}</executionXML>-->
+                    </suiteXmlFiles>
+                    <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>true</value>
+                        </property>
+                    </properties>
+                </configuration>
+
+            </plugin>
         </plugins>
     </build>
 </project>
